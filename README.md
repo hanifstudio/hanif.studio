@@ -1,62 +1,89 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="Hanif Studio Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Hanif Studio
 
-This contains everything you need to run your app locally.
+Full-stack Product Engineer portfolio. Jakarta-based developer building products end to end with AI integration.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1rYNuDwoEVduucmvyX9fyI935vFC8rw_L
+## Tech Stack
 
-## Run Locally
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4
+- **UI:** React 19, Lucide Icons
+- **Font:** Geist
+- **Scheduling:** Cal.com Embed
 
-**Prerequisites:** Node.js
+## Getting Started
 
-1. Install dependencies:
+### Prerequisites
+
+- Node.js 18+
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
 
    ```bash
+   git clone https://github.com/yourusername/hanif-studio.git
+   cd hanif-studio
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pnpm install
+   # or
    npm install
    ```
 
-2. Set up environment variables:
-   - Copy `.env.example` to `.env.local`:
-     ```bash
-     cp .env.example .env.local
-     ```
-   - Edit `.env.local` and set your actual values:
-     - `NEXT_PUBLIC_BASE_URL`: Your application URL (use `http://localhost:3000` for local development)
-     - `GEMINI_API_KEY`: Your Gemini API key from [Google AI Studio](https://ai.google.dev/)
-
-3. Run the development server:
+3. Set up environment variables:
 
    ```bash
+   cp .env.example .env.local
+   ```
+
+   Edit `.env.local` with your values:
+   - `NEXT_PUBLIC_BASE_URL` — Your application URL (`http://localhost:3000` for dev)
+   - `GEMINI_API_KEY` — Your Gemini API key from [Google AI Studio](https://ai.google.dev/)
+
+4. Run the development server:
+
+   ```bash
+   pnpm dev
+   # or
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Environment Variables
 
-This application uses the following environment variables:
-
-| Variable               | Description                                          | Required | Example                                                          |
-| ---------------------- | ---------------------------------------------------- | -------- | ---------------------------------------------------------------- |
-| `NEXT_PUBLIC_BASE_URL` | Base URL for the application (used for SEO metadata) | Yes      | `http://localhost:3000` (dev) or `https://yourdomain.com` (prod) |
-| `GEMINI_API_KEY`       | Gemini API key for AI features (server-side only)    | Yes      | Your API key from Google AI Studio                               |
-
-**Note:** Variables prefixed with `NEXT_PUBLIC_` are exposed to the browser. Variables without this prefix are only available on the server side.
+| Variable               | Description                                      | Required |
+| ---------------------- | ------------------------------------------------ | -------- |
+| `NEXT_PUBLIC_BASE_URL` | Base URL for SEO metadata                        | Yes      |
+| `GEMINI_API_KEY`       | Gemini API key for AI features (server-side)     | Yes      |
 
 ## Build for Production
 
-1. Create a production build:
+```bash
+pnpm build
+pnpm start
+```
 
-   ```bash
-   npm run build
-   ```
+## Project Structure
 
-2. Start the production server:
-   ```bash
-   npm run start
-   ```
+```
+hanif-studio/
+├── app/              # Next.js App Router pages
+├── components/       # React components
+├── lib/              # Utility functions
+├── public/           # Static assets
+└── types.ts          # TypeScript type definitions
+```
 
-Make sure to set the production values for environment variables in your deployment platform.
+## License
+
+MIT

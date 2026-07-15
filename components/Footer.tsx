@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
                   Book a 15-min <br /> intro call
                 </p>
                 <a
-                  href="https://cal.com/hanifyaskur/intro-call"
+                  href="https://cal.com/hanifstudio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 md:h-14 text-white text-lg md:text-xl rounded-2xl bg-linear-to-br from-gray-700 to-gray-500 shadow-[inset_0_0_1.6em_-0.6em_rgb(75,85,99)] flex items-center justify-center hover:from-gray-600 hover:to-gray-400 transition-all active:scale-[0.98]"
@@ -147,7 +147,7 @@ export const Footer: React.FC = () => {
               </a>
             </div>
             <p className="text-black/60 text-sm font-geist">
-              © <span className="font-geist">2025</span> Hanif. All rights
+              © <span className="font-geist">{new Date().getFullYear()}</span> Hanif. All rights
               reserved.
             </p>
           </div>
